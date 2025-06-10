@@ -117,6 +117,8 @@ int main(void)
                     // Draw buttons: left-right back
                     if (IsGamepadButtonDown(gamepad, GAMEPAD_BUTTON_LEFT_TRIGGER_1)) DrawCircle(259, 61, 20, RED);
                     if (IsGamepadButtonDown(gamepad, GAMEPAD_BUTTON_RIGHT_TRIGGER_1)) DrawCircle(536, 61, 20, RED);
+                    if (IsGamepadButtonDown(gamepad, GAMEPAD_BUTTON_LEFT_TRIGGER_2)) leftTrigger = 1.0;
+                    if (IsGamepadButtonDown(gamepad, GAMEPAD_BUTTON_RIGHT_TRIGGER_2)) rightTrigger = 1.0;
 
                     // Draw axis: left joystick
                     Color leftGamepadColor = BLACK;
