@@ -36,9 +36,9 @@ fn emSdkSetupStep(b: *std.Build, emsdk: *std.Build.Dependency) !?*std.Build.Step
 
     if (!dot_emsc_exists) {
         const emsdk_install = createEmsdkStep(b, emsdk);
-        emsdk_install.addArgs(&.{ "install", "latest" });
+        emsdk_install.addArgs(&.{ "install", "4.0.9" });
         const emsdk_activate = createEmsdkStep(b, emsdk);
-        emsdk_activate.addArgs(&.{ "activate", "latest" });
+        emsdk_activate.addArgs(&.{ "activate", "4.0.9" });
         emsdk_activate.step.dependOn(&emsdk_install.step);
         return emsdk_activate;
     } else {
